@@ -25,11 +25,11 @@ def start(message):
     username = message.from_user.username or message.from_user.first_name or 'User'
 
     if is_user_member(user_id):
-        bot.reply_to(message, f"✅ Welcome, {username}! You are a member of {CHANNEL_USERNAME}.")
+        bot.reply_to(message, f"✅ Welcome, {username}! You are now a member of {CHANNEL_USERNAME}.")
     else:
         join_link = f"https://t.me/{CHANNEL_USERNAME[1:]}"
-        markup = InlineKeyboardMarkup().add(InlineKeyboardButton("🔗 Join Channel", url=join_link))
-        bot.reply_to(message, f"🚫 Hi {username}, please join {CHANNEL_USERNAME} to use this bot.", reply_markup=markup)
+        markup = InlineKeyboardMarkup().add(InlineKeyboardButton("Join Main Channel🌟", url=join_link))
+        bot.reply_to(message, f"🚫 Hi {username}, please join {CHANNEL_USERNAME} to use me.", reply_markup=markup)
 
 if __name__ == '__main__':
     print("🤖 Bot is running...")
