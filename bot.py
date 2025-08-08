@@ -8,6 +8,8 @@ CHANNEL_USERNAME = os.environ.get("CHANNEL_USERNAME")  # Include @ in value
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
+bot.remove_webhook()
+
 # Function to check if a user is a member of the channel
 def is_user_member(user_id):
     try:
